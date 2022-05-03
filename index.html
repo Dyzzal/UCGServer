@@ -24,7 +24,7 @@ function randomIntFromInterval(min, max) { // min and max included
 var code= randomIntFromInterval(100000, 999999);
 codeEl.innerHTML = code;
 var ably = new Ably.Realtime({ key: '9uhyqw.N6eJBw:E7WMQcVIzAseR2001w3P5yyrRu4OXtJcjyyyzLFRvXY' }),
-    channel = ably.channels.get(code.value),
+    channel = ably.channels.get(code),
     $receivedLog = $('#received');
 
 channel.subscribe('main', function(message) {
